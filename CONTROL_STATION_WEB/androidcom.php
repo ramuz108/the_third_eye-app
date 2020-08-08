@@ -1,3 +1,5 @@
+// Author:Ramachandran A Dr.Gireeshan MG
+// php script used to communicate with android app
 <?php
 $servername = "localhost";
 $username = "root";

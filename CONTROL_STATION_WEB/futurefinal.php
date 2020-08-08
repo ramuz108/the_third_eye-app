@@ -1,7 +1,8 @@
+<!--Author:Ramachandran A Dr.Gireeshan MG-->
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Alerting System</title>
+    <title>Alerting System - Future Scope</title>
     <meta charset="utf-8">
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,6 +54,7 @@
  
   </head>
  <body>
+ <!--Police UI Container-->
  <div class="lightbar">
   <div id="light-1" class="light strobe blue">
     <div class="inner-light"></div>
@@ -183,6 +185,7 @@
   </div>
 </div>
 <br><br>
+<!--Based on the details recieved,create custom table to demonstrate the main screen-->
 <?php
 
 echo "<center><table><tr>";

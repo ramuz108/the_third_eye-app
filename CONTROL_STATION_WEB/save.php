@@ -1,3 +1,5 @@
+<!--Author: Ramachandran A Dr.Gireeshan MG-->
+<!--PHP script used to save the alarms to the local machine-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -45,6 +47,7 @@ form
 </style>
 <body>
 <img src="./logo.png" class="rotate" width=80 height=80 />
+<!--Police UI Container-->
 <div class="lightbar">
   <div id="light-1" class="light strobe blue">
     <div class="inner-light"></div>

@@ -1,3 +1,5 @@
+//Author: Ramachandran A Dr.Gireeshan MG
+//Main Activity which listens for alarms
 package com.example.thethirdeye;
 
 import android.app.NotificationChannel;
@@ -86,14 +88,14 @@ public class MainActivity extends AppCompatActivity {
         img = (ImageView)findViewById(R.id.imageView);
         Log.e("MAIN","INSIDE MAIN");
         Globals g = (Globals)getApplication();
-        data=g.getData();
+        data=g.getData(); //retrieve the ip address of the control station
         Log.e("GLOBAL",data);
         createNotificationChannel();
         final RippleBackground rippleBackground=(RippleBackground)findViewById(R.id.content);
-        rippleBackground.startRippleAnimation();
+        rippleBackground.startRippleAnimation(); //custom ripple animation on image
         Handler handler1 = new Handler();
         int i;
-        for( i = 0; i <=1000; i++) {               //just a hardcoded iteration
+        for( i = 0; i <=1000; i++) {               //retrieve the data from the control station every 10 seconds
             handler1.postDelayed(new Runnable() {
 
                 @Override
@@ -110,10 +112,10 @@ public class MainActivity extends AppCompatActivity {
     private void openmap()
     {
         Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-                Uri.parse("http://maps.google.com/maps?daddr=10.6300,76.6186"));
+                Uri.parse("http://maps.google.com/maps?daddr=10.6300,76.6186")); //open navigation to the latlon [latlon hardcoded as of now]
         startActivity(intent);
     }
-    private void createNotificationChannel() {
+    private void createNotificationChannel() { //set the notification channel
         NotificationManager notification_manager = (NotificationManager) this
                 .getSystemService(Context.NOTIFICATION_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -136,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void getHttpResponse() throws IOException {
 
-        String url = "http://"+data+"/androidcom.php";
+        String url = "http://"+data+"/androidcom.php"; //connector to the control station
 
         OkHttpClient client = new OkHttpClient();
 
@@ -145,9 +147,6 @@ public class MainActivity extends AppCompatActivity {
                 .header("Accept", "application/json")
                 .header("Content-Type", "application/json")
                 .build();
-
-//        Response response = client.newCall(request).execute();
-//        Log.e(TAG, response.body().string());
 
         client.newCall(request).enqueue(new Callback() {
             @Override
@@ -178,8 +177,8 @@ public class MainActivity extends AppCompatActivity {
                         SimpleDateFormat mdformat = new SimpleDateFormat("HH:mm:ss");
                         String now =  mdformat.format(calendar.getTime());
                         LocalTime stop = LocalTime.parse(now) ;
-                        long secs = ChronoUnit.SECONDS.between( start , stop ) ;
-                        if(secs <=60 )
+                        long secs = ChronoUnit.SECONDS.between( start , stop ) ; //filtering based  on time
+                        if(secs <=60 ) //60 seconds threshold
                         {
                             Log.e("BREACH#######", ""+alarm);
                             Alerter.create(MainActivity.this)
@@ -188,21 +187,19 @@ public class MainActivity extends AppCompatActivity {
                                     .setDuration(5000)
                                     .setBackgroundColorInt(Color.RED)
                                     .setIcon(R.drawable.ic_baseline_warning_24)
-                                    .show();
+                                    .show(); //show custom alert
                             Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                            v.vibrate(1000);
-                            Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-                                    Uri.parse("http://maps.google.com/maps?daddr=10.6300,76.6186"));
-                            startActivity(intent);
+                            v.vibrate(1000); //vibrate the device
+                            openmap() //open navigation
                             notification_builder.setSmallIcon(R.drawable.ic_baseline_warning_24)
                                     .setContentTitle("Breach Detected")
                                     .setContentText(""+alarm)
                                     .setAutoCancel(true);
-                            notification_manager.notify(0, notification_builder.build());
+                            notification_manager.notify(0, notification_builder.build()); //show notification
                             mp= MediaPlayer.create(MainActivity.this,R.raw.alert);
                             try{
 
-                                mp.start();
+                                mp.start(); //play alarm sound
 
                             }catch(Exception e){e.printStackTrace();
                             }

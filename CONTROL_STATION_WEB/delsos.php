@@ -1,3 +1,5 @@
+<!--Author: Ramachandran A Dr.Gireeshan MG-->
+<!--Delete SOS numbers from the database-->
 <!DOCTYPE html>
 <html>
   <head>

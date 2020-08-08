@@ -1,3 +1,5 @@
+//Author: Ramachandran A Dr.Gireeshan MG
+//Activity to set the ip address of the control station
 package com.example.thethirdeye;
 
 import android.content.Intent;
@@ -28,7 +30,7 @@ public class front_screen extends AppCompatActivity {
         img = (ImageView)findViewById(R.id.imageView2);
         txt = (EditText)findViewById(R.id.ipadd);
         Animation ani = AnimationUtils.loadAnimation(this, R.anim.rotate);
-        img.setAnimation(ani);
+        img.setAnimation(ani); //rotate animation on image
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,9 +43,9 @@ public class front_screen extends AppCompatActivity {
                 else
                 {
                     Globals g = (Globals)getApplication();
-                    g.setData(dta);
+                    g.setData(dta); //sets the ip address to the global variable
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(intent);
+                    startActivity(intent); //start the main activity
 
 
                 }

@@ -1,10 +1,12 @@
+<!--Author:Ramachandran A Dr.Gireeshan MG-->
+<!--Add sos numbers to the database-->
 <!DOCTYPE html>
 <html>
   <head>
     <title>The Third Eye - SOS</title>
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./police.css"
+  <link rel="stylesheet" href="./police.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
 <style>
@@ -174,6 +176,7 @@ form
     
   </div>
 </div>
+<!--Connect to database and add-->
 <?php
 $servername = "localhost";
 $username = "root";

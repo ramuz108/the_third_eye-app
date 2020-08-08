@@ -1,3 +1,5 @@
+<!--Author: Ramachandran A Dr.Gireeshan MG-->
+<!--Page used to enter the details of the sensors along with latlon, name/scope to be given and camera the ip associated-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -48,6 +50,7 @@ h3{
  <!--Generating custom form based on the number of sensors-->
 <form style="border-style: dashed;border-color:red;" action="futurefinal.php" method="post">
 <center>
+<!--Custom form based on the number of sensors entered-->
 <?php
 $numbers = $_POST["num"];
 for($i=1;$i<=$numbers;$i++)

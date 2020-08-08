@@ -1,7 +1,10 @@
+<!--Author: Ramachandran A Dr.Gireeshan MG-->
+<!--Used to demonstrate the future-->
+<!--Page used to accept the number of sensors/hardware modules-->
 <!DOCTYPE html>
 <html>
   <head>
-    <title>The Third Eye - Clear Alarms</title>
+    <title>The Third Eye - Future</title>
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./police.css" />
@@ -172,6 +175,7 @@ input[type=submit] {
   </div>
 </div>
 <br>
+<!--Accept the number of sensors to set up the system-->
 <form style="border-style: dashed;border-color:red;" action="viewfuture.php" method="post">
 <center>
 <h4 style="color:white">Select the number of sensors</h4>

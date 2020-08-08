@@ -1,3 +1,5 @@
+<!--Author: Ramachandran A Dr.Gireeshan MG-->
+<!--Login Screen -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -29,6 +31,16 @@ body{
     transform: rotate(359deg);
   }
 }
+#login_container  
+{
+  width:30%; 
+  margin:auto; 
+  padding:120px 10px 10px 10px; 
+  background-position:center 10px; 
+  background-repeat:no-repeat; 
+  background-color:#1f1f14; 
+  border-radius: 20px;
+}
 input[type=submit] {
  background-color: #4CAF50; /* Green */
   border: none;
@@ -38,6 +50,7 @@ input[type=submit] {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  border-radius: 4px;
 
 }
 input[type=button] {
@@ -49,6 +62,7 @@ input[type=button] {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  border-radius: 4px;
 
 }
 input[type=text], select {
@@ -213,7 +227,8 @@ text-align: center;
 <br><br>
  <h1>Login</h1>
  <center>
- <!--Login form-->
+   <div id ="login_container" >
+ <!--Login form action set to login.php-->
  <form id="login" action="login.php" method="post" >
  <input type ="text" id="usr"  name="username" placeholder="username..." required /><br><br>
  <input type ="password" id="pass"  name="password" placeholder="password..." required /><br><br>
@@ -224,13 +239,14 @@ text-align: center;
  <br><br>
  <input type="button" value="Team" onclick="credits()" />
  </center>
+</div>
  <script>
 function clearr() {
 
   document.getElementById("login").reset(); //clear the textfields and reset the form
 }
 function credits() {
-  window.location.replace("http://localhost/credits.html"); //switch to credits page
+  window.location.assign("http://localhost/credits.html"); //switch to credits page
 }
 </script>
 </body>

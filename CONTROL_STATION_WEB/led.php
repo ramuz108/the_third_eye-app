@@ -214,7 +214,7 @@
               {
                 $output2 = shell_exec("python detect2.py");  //python image recognition script used to confirm if the alarm is caused by any threats
                 //Humans,cars,cycles and trucks are categorised as threats in the current context and the rest are predicted false
-                if (strpos($output2, 'person') !== false || strpos($output2, 'car') !== false || strpos($output2, 'cycle') !== false || strpos($output2, 'truck') !== false ) {    
+                if (strpos($output2, 'person') !== false || strpos($output2, 'car') !== false || strpos($output2, 'bicycle') !== false || strpos($output2, 'truck') !== false || strpos($output2, 'motorcycle') !== false) {    
                  ?>
                  <script>
                  //blink the warning sign
@@ -289,7 +289,7 @@
               if($diff <=50)
               {
                 $output2 = shell_exec("python detect2.py");
-                if (strpos($output2, 'person') !== false) {  
+                if (strpos($output2, 'person') !== false || strpos($output2, 'car') !== false || strpos($output2, 'bicycle') !== false || strpos($output2, 'truck') !== false || strpos($output2, 'motorcycle') !== false) {  
                ?>
                  <script>
                  var warning ="<img class=\"blink\" src=\"warning.png\" width=\"100px\" height=\"100px\" height=100 />";
@@ -358,7 +358,7 @@
               if($diff <=30)
               {
                 $output2 = shell_exec("python detect2.py");
-                if (strpos($output2, 'person') !== false) {    
+                if (strpos($output2, 'person') !== false || strpos($output2, 'car') !== false || strpos($output2, 'bicycle') !== false || strpos($output2, 'truck') !== false || strpos($output2, 'motorcycle') !== false) {    
                
                ?>
                  <script>
@@ -428,7 +428,7 @@
               if($diff <=30)
               {
                 $output2 = shell_exec("python detect2.py");
-                if (strpos($output2, 'person') !== false) {   
+                if (strpos($output2, 'person') !== false || strpos($output2, 'car') !== false || strpos($output2, 'bicycle') !== false || strpos($output2, 'truck') !== false || strpos($output2, 'motorcycle') !== false) {   
                 
                ?>
                  <script>
@@ -498,7 +498,7 @@
               if($diff <=30)
               {
                 $output2 = shell_exec("python detect2.py");
-                if (strpos($output2, 'person') !== false) {   
+                if (strpos($output2, 'person') !== false || strpos($output2, 'car') !== false || strpos($output2, 'bicycle') !== false || strpos($output2, 'truck') !== false || strpos($output2, 'motorcycle') !== false) {   
                 
                ?>
                  <script>
@@ -569,7 +569,7 @@
               if($diff <=30)
               {
                 $output2 = shell_exec("python detect2.py");
-                if (strpos($output2, 'person') !== false) {   
+                if (strpos($output2, 'person') !== false || strpos($output2, 'car') !== false || strpos($output2, 'bicycle') !== false || strpos($output2, 'truck') !== false || strpos($output2, 'motorcycle') !== false) {   
                
                ?>
                  <script>
@@ -639,7 +639,7 @@
               if($diff <=30)
               {
                 $output2 = shell_exec("python detect2.py");
-                if (strpos($output2, 'person') !== false) {   
+                if (strpos($output2, 'person') !== false || strpos($output2, 'car') !== false || strpos($output2, 'bicycle') !== false || strpos($output2, 'truck') !== false || strpos($output2, 'motorcycle') !== false) {   
                 
                ?>
                  <script>
@@ -709,7 +709,7 @@
               if($diff <=30)
               {
                 $output2 = shell_exec("python detect2.py");
-                if (strpos($output2, 'person') !== false) {   
+                if (strpos($output2, 'person') !== false || strpos($output2, 'car') !== false || strpos($output2, 'bicycle') !== false || strpos($output2, 'truck') !== false || strpos($output2, 'motorcycle') !== false) {   
                 
                ?>
                  <script>
@@ -779,7 +779,7 @@
               if($diff <=30)
               {
                 $output2 = shell_exec("python detect2.py");
-                if (strpos($output2, 'person') !== false) {   
+                if (strpos($output2, 'person') !== false || strpos($output2, 'car') !== false || strpos($output2, 'bicycle') !== false || strpos($output2, 'truck') !== false || strpos($output2, 'motorcycle') !== false) {   
                
                ?>
                  <script>
@@ -848,7 +848,7 @@
               if($diff <=30)
               {
                 $output2 = shell_exec("python detect2.py");
-                if (strpos($output2, 'person') !== false) {   
+                if (strpos($output2, 'person') !== false || strpos($output2, 'car') !== false || strpos($output2, 'bicycle') !== false || strpos($output2, 'truck') !== false || strpos($output2, 'motorcycle') !== false) {   
                
                ?>
                  <script>
@@ -917,7 +917,7 @@
               if($diff <=30)
               {
                 $output2 = shell_exec("python detect2.py");
-                if (strpos($output2, 'person') !== false) {   
+                if (strpos($output2, 'person') !== false || strpos($output2, 'car') !== false || strpos($output2, 'bicycle') !== false || strpos($output2, 'truck') !== false || strpos($output2, 'motorcycle') !== false) {   
               
                ?>
                  <script>
@@ -986,7 +986,7 @@
               if($diff <=30)
               {
                 $output2 = shell_exec("python detect2.py");
-                if (strpos($output2, 'person') !== false) {   
+                if (strpos($output2, 'person') !== false || strpos($output2, 'car') !== false || strpos($output2, 'bicycle') !== false || strpos($output2, 'truck') !== false || strpos($output2, 'motorcycle') !== false) {   
                 
                ?>
                  <script>
@@ -1055,7 +1055,7 @@
               if($diff <=30)
               {
                 $output2 = shell_exec("python detect2.py");
-                if (strpos($output2, 'person') !== false) {   
+                if (strpos($output2, 'person') !== false || strpos($output2, 'car') !== false || strpos($output2, 'bicycle') !== false || strpos($output2, 'truck') !== false || strpos($output2, 'motorcycle') !== false) {   
                
                ?>
                  <script>
@@ -1124,7 +1124,7 @@
               if($diff <=30)
               {
                 $output2 = shell_exec("python detect2.py");
-                if (strpos($output2, 'person') !== false) {   
+                if (strpos($output2, 'person') !== false || strpos($output2, 'car') !== false || strpos($output2, 'bicycle') !== false || strpos($output2, 'truck') !== false || strpos($output2, 'motorcycle') !== false) {   
                
                ?>
                  <script>

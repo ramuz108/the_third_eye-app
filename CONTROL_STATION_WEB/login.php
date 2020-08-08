@@ -1,3 +1,5 @@
+<!--Author: Ramachandran A Dr.Gireeshan MG-->
+<!-- PHP script to check the login credentials -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -45,6 +47,7 @@ form
 </style>
 <body>
 <img src="./logo.png" class="rotate" width=80 height=80 />
+<!--Police lamp UI container-->
 <div class="lightbar">
   <div id="light-1" class="light strobe blue">
     <div class="inner-light"></div>
@@ -174,6 +177,7 @@ form
     
   </div>
 </div>
+<!--Test for the availiability from the database-->
 <?php
 $servername = "localhost";
 $username = "root";
@@ -197,7 +201,7 @@ if ($count == 0)
 ?> 
    <script>
    alert("Invalid Credentials");
-   window.location.replace("http://localhost");
+   window.location.replace("http://localhost"); //navigate back to login screen
    </script>
 <?php
 }
@@ -205,7 +209,7 @@ else
 {
  ?> 
    <script>
-   window.location.replace("http://localhost/main.php")
+   window.location.replace("http://localhost/main.php") //navigate to main screen
    </script>
 <?php
 }

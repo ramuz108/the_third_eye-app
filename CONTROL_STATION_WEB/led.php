@@ -1,3 +1,7 @@
+<!--Author: Ramachandran A Dr.Gireeshan MG-->
+<!--Page used for reading the emails recieved with the alarm for the present day, filter based on time and image recognition and predict for false alarms.Show alerts, send SOS messages and opens camera feed-->
+<!--Uses Fast2SMS api-->
+<!--Uses Python code integration-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -56,6 +60,7 @@
   <body>
   
    <center>
+    <!--Custom table for demonstration of the perimeters -->
     <table>
     <tr>
     <th><center>Ernakulam</center></th>
@@ -135,6 +140,7 @@
     </table>
     
   </center>
+<!--alert audio-->
  <audio id="siren">
   <source src="siren.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
@@ -142,6 +148,7 @@
   </body></html>
   <?php
    try {
+    //connect to database
     $host = 'localhost';
     $dbname = 'thirdeye';
     $username = 'root';
@@ -155,13 +162,16 @@
     } 
    $today =date("j F Y");
    $threshold = 30000;
+   //configure imap for reading emails
    if (! function_exists('imap_open')) {
         echo "IMAP is not configured.";
         exit();
     } 
     else 
     {
-       $connection = imap_open('{imap.gmail.com:993/imap/ssl}INBOX', 'softwaresolutionszeus@gmail.com', 'zeussoftwaresolutions') or die('Cannot connect to Gmail: ' . imap_last_error());
+       //connect to gmail account using imap. Password not included for security ;-)
+       $connection = imap_open('{imap.gmail.com:993/imap/ssl}INBOX', 'softwaresolutionszeus@gmail.com', '****') or die('Cannot connect to Gmail: ' . imap_last_error());
+        //retrieving all the mails from the present day with the respective subjects of perimeters.
         $ekm = imap_search($connection, 'SUBJECT "EKM" ON "'.$today.'"');
         $pkd = imap_search($connection, 'SUBJECT "PKD" ON "'.$today.'"');
         $klm = imap_search($connection, 'SUBJECT "KLM" ON "'.$today.'"');
@@ -189,34 +199,40 @@
         $sqll = "SELECT number from sos";
         $resultt = $conn->query($sqll);
         //$conn->close();
-        if (is_array($ekm))
+        if (is_array($ekm))     //[Representing similar codes] if any of the emails fount to be present for the current day, it gets processed  
         {      
           $nums=count($ekm);
-          for ($i=0;$i<$nums;$i++)
+          for ($i=0;$i<$nums;$i++)  //for each of the alarms
           { 
               $datetime = new DateTime();
               $overview = imap_fetch_overview($connection, $ekm[$i], 0);
               $dt = $overview[0]->date;
               $d = strtotime($overview[0]->date);
               $now = strtotime($datetime->format('Y-m-d H:i:s'));
-              $diff = $now - $d;
-              if($diff <=50)
+              $diff = $now - $d;   //filtering based on time
+              if($diff <=50) //threshold as 50
               {
-                $output2 = shell_exec("python detect2.py");
-                if (strpos($output2, 'person') !== false) {    
+                $output2 = shell_exec("python detect2.py");  //python image recognition script used to confirm if the alarm is caused by any threats
+                //Humans,cars,cycles and trucks are categorised as threats in the current context and the rest are predicted false
+                if (strpos($output2, 'person') !== false || strpos($output2, 'car') !== false || strpos($output2, 'cycle') !== false || strpos($output2, 'truck') !== false ) {    
                  ?>
                  <script>
+                 //blink the warning sign
                  var warning ="<img class=\"blink\" src=\"warning.png\" width=\"100px\" height=\"100px\" height=100 />";
                  document.getElementById("ekm").innerHTML = warning;
+                 //play the warning tone
                  var x = document.getElementById("siren"); 
                  x.play();
+                //open live camera feed.Used a public ip camera's link for demonstration.
                  window.open("http://wmccpinetop.axiscam.net/view/viewer_index.shtml?id=35", "_blank", "toolbar=yes,top=500,left=500,width=400,height=400");    
                 </script>
         <?php
+          //insert the alarm into database
           date_default_timezone_set("Asia/Calcutta");  
           $x = date("h:i:s");
           $sql = "INSERT INTO alarms(alarm,details,lat,lon) VALUES('EKM','".$x."','10.6300','76.6186')";
-          $result = $conn->query($sql);    
+          $result = $conn->query($sql); 
+         //get the SOS numbers from the database and send SOS sms to each and every numbers using Fast2SMS API
         while ($row = $resultt->fetch_assoc())
         {
          $fields = array(

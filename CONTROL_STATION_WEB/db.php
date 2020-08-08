@@ -1,3 +1,5 @@
+<!--Author: Ramachandran A Dr.Gireeshan MG-->
+<!--Page to load and display the alarms from the database-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +16,7 @@ body{
 </style>
 </head>
 <body>
+<!--Connect to database and retrieve alarms-->	
 <?php
 $servername = "localhost";
 $username = "root";
@@ -45,6 +48,7 @@ $conn->close();
 <tbody>
                     <?php while ($row = $result->fetch_assoc()): ?>
                         <tr>
+			<!--Display as columns-->
                             <td><?php echo htmlspecialchars($row['alarmid']) ?></td>
                             <td><?php echo htmlspecialchars($row['alarm']); ?></td>
                             <td><?php echo htmlspecialchars($row['details']); ?></td>	

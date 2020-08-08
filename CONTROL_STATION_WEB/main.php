@@ -1,3 +1,5 @@
+ <!--Author: Ramachandran A Dr.Gireeshan MG-->
+ <!--Main Page of the Control Station-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -212,6 +214,14 @@ echo "<p style='color:red'>{$localIP}</p>"
  <form action="http://localhost/save.php" method="post">
  &nbsp;&nbsp;<input type="submit" class="btn btn-success" value ="Save to file" />
  &nbsp;&nbsp;<input type="button" onclick="gotosos()" class="btn btn-success" value ="SOS" />
+ </form>
+ <!--Future scope page-->
+ <form action="http://localhost/future.php" method="post">
+ &nbsp;&nbsp;<input type="submit" class="btn btn-success" value ="Future Scope" />
+ </form>
+  <!--Logout to main page-->
+ <form action="http://localhost" method="post">
+ &nbsp;&nbsp;<input type="submit" class="btn btn-success" value ="Logout" />
  </form>
 <!--go to sos page-->
  <script>

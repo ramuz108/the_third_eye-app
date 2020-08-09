@@ -61,7 +61,11 @@ Can be termed as perimeter of perimeters.
 - Personal secuurity officers inside with the VIP will be sent with an SOS SMS indicating the breach and scope.
 
 # How it works
+### Use Case 
+![use_case](https://user-images.githubusercontent.com/26342942/89726914-b8697280-da3d-11ea-9a56-ca7be6a24805.jpg)
 
+### Data Flow 
+![DFD](https://user-images.githubusercontent.com/26342942/89726924-d20aba00-da3d-11ea-99f8-c8295b738c4c.jpg)
 - The hardware module will be having a PIR sensor a computer vision enable camera. 
 - The PIR senosor will be listening in its range for even slight movements all the time.
 - Once a movement is detected, a mail is sent from the hardware module with the module id to the mail address configured with the control station.
@@ -92,3 +96,9 @@ The hardware module comes with a wifi enabled microcontroller, a PIR sensor for 
 
 - ESP8266 NodeMCU is used as the micrcontroller for this project as it is wifi capable.
 - A custom low cost PIR sensor is used for detecting the movements.
+- Blynk platform is used to configure the hardware with the mail id of the control station.
+- Mail will be sent with the module id in cause of any movement being detected.
+
+# Control Station
+
+

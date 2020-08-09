@@ -132,4 +132,6 @@ The hardware module comes with a wifi enabled microcontroller, a PIR sensor for 
 
 ### Future Scope
 
+![image](https://user-images.githubusercontent.com/26342942/89727418-434c6c00-da42-11ea-983e-6db8dbcb65a9.png)
+
 - Number of hardware modules used can be selected.

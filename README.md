@@ -135,3 +135,13 @@ The hardware module comes with a wifi enabled microcontroller, a PIR sensor for 
 ![image](https://user-images.githubusercontent.com/26342942/89727418-434c6c00-da42-11ea-983e-6db8dbcb65a9.png)
 
 - Number of hardware modules used can be selected.
+
+## Future Scope
+
+![Screenshot (84)](https://user-images.githubusercontent.com/26342942/89727453-d1285700-da42-11ea-8593-3d936ede16ca.png)
+
+- Based on the number of modules/sensors selected, custom form is displayed for entering the configuration details.
+- Used to configure the perimeter set up with the control station.
+- Scope should be entered which is used to identify the trigger location/zone.
+- Latitude and longitude should be entered to navigate the android application users in case of any breach.
+- Ip address of the camera integrated with the hardware module to load the Ai based detection program and open live feed in the case of any breach.

@@ -60,6 +60,19 @@ Can be termed as perimeter of perimeters.
 - The sentries(android app users) will be alerted by the application and will recieve directions on the google maps for navigating to the module that triggered the breach.
 - Personal secuurity officers inside with the VIP will be sent with an SOS SMS indicating the breach and scope.
 
+# How it works
+
+- The hardware module will be having a PIR sensor a computer vision enable camera. 
+- The PIR senosor will be listening in its range for even slight movements all the time.
+- Once a movement is detected, a mail is sent from the hardware module with the module id to the mail address configured with the control station.
+- The control station listens to the mails on a timely basis.
+- When the conrol station encounters the mail, time based constraints are checked to verify that the mail is not a duplicate of the previous.
+- When the mail is found to be new, the curresponding camera of the module is loaded with the object detection script.
+- if the script finds nothing as humans/vehicles, the alarm is predicted false and the mail is discarded.
+- If any threat is identified[Eg: Humans/vechicles in our current context], alarm will be initiated and the live camera feed of the triggered location will be displayed in the control station automatically.
+- The android application users/sentries/security in charge will be alerted with the navigaton towards the breach.
+- The SOS numbers will be delivered with an SMS indicating the breach.
+
 # Users
 ### Control Master
 ### Oerations/Duty in Charge
@@ -75,3 +88,7 @@ Can be termed as perimeter of perimeters.
 The hardware module comes with a wifi enabled microcontroller, a PIR sensor for detecting movement and computer vision enabled camera.
 [Note: Because of the shortage of resources, the webcam is used instead of camera for demonstration !!!]
 
+![IMG-20200807-WA0120](https://user-images.githubusercontent.com/26342942/89726716-5576dc00-da3b-11ea-8774-71f1d829bee8.jpg)
+
+- ESP8266 NodeMCU is used as the micrcontroller for this project as it is wifi capable.
+- A custom low cost PIR sensor is used for detecting the movements.

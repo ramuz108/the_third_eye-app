@@ -174,8 +174,12 @@ The hardware module comes with a wifi enabled microcontroller, a PIR sensor for 
  - Will be connected to the control station and refreshes in a timely basis.
  
  ### Login Screen
+ ![Screenshot_2020-08-06-12-36-16-653_com example thethirdeye](https://user-images.githubusercontent.com/26342942/89731867-39d5fa80-da68-11ea-9710-fedfb30c4295.jpg)
+- Used to check the credentials of the user.
  ### Configuration Screen
+ - Used to Configure the android application with the ip address of the control station.
  ### Alerter Screen
+ - Listens for alarms 
  # In Action
  ## Control Station
  ## Android Application

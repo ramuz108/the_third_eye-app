@@ -69,3 +69,9 @@ Can be termed as perimeter of perimeters.
 ### Hardware
 ### Control Station [Web]
 ### Android
+
+# Hardware
+
+The hardware module comes with a wifi enabled microcontroller, a PIR sensor for detecting movement and computer vision enabled camera.
+[Note: Because of the shortage of resources, the webcam is used instead of camera for demonstration !!!]
+

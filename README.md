@@ -123,3 +123,13 @@ The hardware module comes with a wifi enabled microcontroller, a PIR sensor for 
 - Provision for logging out from the control station.
 
 
+### SOS Page
+
+![Screenshot (82)](https://user-images.githubusercontent.com/26342942/89727375-cf11c880-da41-11ea-8b51-daafa5aac29e.png)
+
+- Provision to add SOS numbers
+- Provision to delete SOS numbers
+
+### Future Scope
+
+- Number of hardware modules used can be selected.

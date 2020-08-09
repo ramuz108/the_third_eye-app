@@ -108,3 +108,18 @@ The hardware module comes with a wifi enabled microcontroller, a PIR sensor for 
 - The control station master can access the system using his credentials stored in the database.
 
 ### Main Screen
+
+
+
+![Screenshot (81)](https://user-images.githubusercontent.com/26342942/89727272-a5a46d00-da40-11ea-8424-4df0c56a925e.png)
+
+- The IP address of the control station is mentioned for the android apps to connect.
+- IFrame 1 - loads the panel of perimeter scopes. [Note: Included the districts fro demonstration].
+- Iframe 2 - loads the table that contains the data of valid alarms triggered.
+- Provision for clearing the alarms.
+- Provision for saving the alarms to the local machine.
+- Provision for navigating to the sos page.
+- Provision for navigating to the future scope page.
+- Provision for logging out from the control station.
+
+

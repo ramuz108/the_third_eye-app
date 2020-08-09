@@ -101,13 +101,13 @@ The hardware module comes with a wifi enabled microcontroller, a PIR sensor for 
 
 # Control Station
 
-### Login Screen
+## Login Screen
 
 ![Screenshot (80)](https://user-images.githubusercontent.com/26342942/89727106-848f4c80-da3f-11ea-80ee-fb511627c546.png)
 
 - The control station master can access the system using his credentials stored in the database.
 
-### Main Screen
+## Main Screen
 
 
 
@@ -123,20 +123,20 @@ The hardware module comes with a wifi enabled microcontroller, a PIR sensor for 
 - Provision for logging out from the control station.
 
 
-### SOS Page
+## SOS Page
 
 ![Screenshot (82)](https://user-images.githubusercontent.com/26342942/89727375-cf11c880-da41-11ea-8b51-daafa5aac29e.png)
 
 - Provision to add SOS numbers
 - Provision to delete SOS numbers
 
-### Future Scope
+## Future Scope
 
 ![image](https://user-images.githubusercontent.com/26342942/89727418-434c6c00-da42-11ea-983e-6db8dbcb65a9.png)
 
 - Number of hardware modules used can be selected.
 
-## Future Scope
+### Future Scope - Configuration
 
 ![Screenshot (84)](https://user-images.githubusercontent.com/26342942/89727453-d1285700-da42-11ea-8593-3d936ede16ca.png)
 
@@ -145,3 +145,12 @@ The hardware module comes with a wifi enabled microcontroller, a PIR sensor for 
 - Scope should be entered which is used to identify the trigger location/zone.
 - Latitude and longitude should be entered to navigate the android application users in case of any breach.
 - Ip address of the camera integrated with the hardware module to load the Ai based detection program and open live feed in the case of any breach.
+
+### Future Scope - Final Listener
+
+![Screenshot (85)](https://user-images.githubusercontent.com/26342942/89727599-fd90a300-da43-11ea-9a79-e10196d2fbc2.png)
+
+- Based on the sope names provided on the sensors, the scopes gets displayed in the alerting panel.
+- If a sensor triggers a movement and when the control station finds it a valid one, the scope/zone configured to the module gets alerted for better governance.
+
+

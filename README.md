@@ -177,8 +177,13 @@ The hardware module comes with a wifi enabled microcontroller, a PIR sensor for 
  ![Screenshot_2020-08-06-12-36-16-653_com example thethirdeye](https://user-images.githubusercontent.com/26342942/89731867-39d5fa80-da68-11ea-9710-fedfb30c4295.jpg)
 - Used to check the credentials of the user.
  ### Configuration Screen
+ ![Screenshot_2020-08-08-11-47-28-861_com example thethirdeye](https://user-images.githubusercontent.com/26342942/89732052-95ed4e80-da69-11ea-8ae6-df5e5e1929ad.jpg)
+
  - Used to Configure the android application with the ip address of the control station.
+ 
  ### Alerter Screen
+ ![Screenshot_2020-08-04-16-39-38-045_com example thethirdeye](https://user-images.githubusercontent.com/26342942/89732059-a30a3d80-da69-11ea-9ef4-fbe58bea253e.jpg)
+
  - Listens for alarms 
  # In Action
  ## Control Station

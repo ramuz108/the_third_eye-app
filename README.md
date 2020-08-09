@@ -75,7 +75,17 @@ Can be termed as perimeter of perimeters.
 - if the script finds nothing as humans/vehicles, the alarm is predicted false and the mail is discarded.
 - If any threat is identified[Eg: Humans/vechicles in our current context], alarm will be initiated and the live camera feed of the triggered location will be displayed in the control station automatically.
 - The android application users/sentries/security in charge will be alerted with the navigaton towards the breach.
-- The SOS numbers will be delivered with an SMS indicating the breach.
+- The SOS numbers will be delivered with an SMS using Fast2SMS API indicating the breach.
+
+# Tools Used
+-PHP with IMAP
+-Python
+-Tensorflow
+-Keras
+-OpenCV
+-imageAI with RetinaNet Model
+-Javascript
+-Fast2SMS API for sending SMS
 
 # Users
 ### Control Master
@@ -156,3 +166,19 @@ The hardware module comes with a wifi enabled microcontroller, a PIR sensor for 
 ### Credits Page
 
 
+![image](https://user-images.githubusercontent.com/26342942/89728151-a8a35b80-da48-11ea-866c-ed95bde61326.png)
+
+
+# Android
+ - The security in charge/sentries/officers in ground duty are equipped with the android application.
+ - Will be connected to the control station and refreshes in a timely basis.
+ 
+ ### Login Screen
+ ### Configuration Screen
+ ### Alerter Screen
+ # In Action
+ ## Control Station
+ ## Android Application
+ ## SOS Message
+ 
+ 

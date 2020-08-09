@@ -66,12 +66,12 @@ Can be termed as perimeter of perimeters.
 
 ### Data Flow 
 ![DFD](https://user-images.githubusercontent.com/26342942/89726924-d20aba00-da3d-11ea-99f8-c8295b738c4c.jpg)
-- The hardware module will be having a PIR sensor a computer vision enable camera. 
-- The PIR senosor will be listening in its range for even slight movements all the time.
+- The hardware module will be having a PIR sensor a computer vision enabled camera. 
+- The PIR sensor will be listening in its range for even slight movements all the time.
 - Once a movement is detected, a mail is sent from the hardware module with the module id to the mail address configured with the control station.
 - The control station listens to the mails on a timely basis.
-- When the conrol station encounters the mail, time based constraints are checked to verify that the mail is not a duplicate of the previous.
-- When the mail is found to be new, the curresponding camera of the module is loaded with the object detection script.
+- When the conrol station encounters a mail, time based constraints are checked to verify that the mail is not a duplicate of the previous.
+- When the mail is found to be new, the corresponding camera of the module is loaded with the object detection script.
 - if the script finds nothing as humans/vehicles, the alarm is predicted false and the mail is discarded.
 - If any threat is identified[Eg: Humans/vechicles in our current context], alarm will be initiated and the live camera feed of the triggered location will be displayed in the control station automatically.
 - The android application users/sentries/security in charge will be alerted with the navigaton towards the breach.
@@ -89,7 +89,7 @@ Can be termed as perimeter of perimeters.
 
 # Users
 ### Control Master
-### Oerations/Duty in Charge
+### Operations/Duty in Charge
 ### SOS Recievers/Personal Security
 
 # Modules
@@ -118,8 +118,6 @@ The hardware module comes with a wifi enabled microcontroller, a PIR sensor for 
 - The control station master can access the system using his credentials stored in the database.
 
 ## Main Screen
-
-
 
 ![Screenshot (81)](https://user-images.githubusercontent.com/26342942/89727272-a5a46d00-da40-11ea-8424-4df0c56a925e.png)
 
@@ -154,7 +152,7 @@ The hardware module comes with a wifi enabled microcontroller, a PIR sensor for 
 - Used to configure the perimeter set up with the control station.
 - Scope should be entered which is used to identify the trigger location/zone.
 - Latitude and longitude should be entered to navigate the android application users in case of any breach.
-- Ip address of the camera integrated with the hardware module to load the Ai based detection program and open live feed in the case of any breach.
+- Ip address of the camera integrated with the hardware module to load the AI based detection program and open live feed in the case of any breach.
 
 ### Future Scope - Final Listener
 
@@ -187,6 +185,10 @@ The hardware module comes with a wifi enabled microcontroller, a PIR sensor for 
  - Listens for alarms 
  # In Action
  ## Control Station
+ 
+
+![alert](https://user-images.githubusercontent.com/26342942/89732366-ea91c900-da6b-11ea-8d19-075b0edae290.png)
+
  ## Android Application
  ![v10](https://user-images.githubusercontent.com/26342942/89732204-d9948800-da6a-11ea-9ef5-3bd1d931b1a0.jpg)
 ![v11](https://user-images.githubusercontent.com/26342942/89732217-f630c000-da6a-11ea-9b60-51fde931e6f6.jpg)

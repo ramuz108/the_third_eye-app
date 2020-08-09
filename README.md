@@ -153,4 +153,6 @@ The hardware module comes with a wifi enabled microcontroller, a PIR sensor for 
 - Based on the sope names provided on the sensors, the scopes gets displayed in the alerting panel.
 - If a sensor triggers a movement and when the control station finds it a valid one, the scope/zone configured to the module gets alerted for better governance.
 
+### Credits Page
+
 

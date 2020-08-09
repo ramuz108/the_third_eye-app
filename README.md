@@ -101,4 +101,10 @@ The hardware module comes with a wifi enabled microcontroller, a PIR sensor for 
 
 # Control Station
 
+### Login Screen
 
+![Screenshot (80)](https://user-images.githubusercontent.com/26342942/89727106-848f4c80-da3f-11ea-80ee-fb511627c546.png)
+
+- The control station master can access the system using his credentials stored in the database.
+
+### Main Screen

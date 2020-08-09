@@ -59,3 +59,13 @@ Can be termed as perimeter of perimeters.
 - If the program finds any threat, the respective scope will be alerted(eg: Main Gate) in the control station and live camera feed will be opened in the control station.
 - The sentries(android app users) will be alerted by the application and will recieve directions on the google maps for navigating to the module that triggered the breach.
 - Personal secuurity officers inside with the VIP will be sent with an SOS SMS indicating the breach and scope.
+
+# Users
+### Control Master
+### Oerations/Duty in Charge
+### SOS Recievers/Personal Security
+
+# Modules
+### Hardware
+### Control Station [Web]
+### Android
